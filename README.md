@@ -3,9 +3,16 @@ An example R code chunk that demonstrates my ability to create detailed maps.
 
 # Introduction / Context
 
-The map below is a geospatial representation of organized violence events in Mali between 1989 and 2021. Each red circle represents one violent event in the dataset. All data was sourced from the Uppsala Conflict Data Program (see read.me in repository for more information).
+While in my graduate-level R class, our professor encouraged us to expand our coding skills whenever we had the time. For one assignment, I decided to learn how to create country-level maps in R. I downloaded a dataset from the [Uppsala Conflict Data Program](https://ucdp.uu.se/) that covered organized violence events in Mali between 1989 and 2021. The dataset, included in this repo, contains key variables like year, type of violence, estimated number of deaths per event, and location data (latitude and longitude). 
 
-# Visualization and Code
+The final map created is a geospatial representation of organized violence events in Mali between 1989 and 2021. Each red circle represents one violent event in the dataset. Click [here](https://jcook125.github.io/R-Code-Example/) to view this code and visualization.
+
+# Data Source
+
+Source: Uppsala Conflict Data Program (Date of retrieval: 23/02/13) UCDP Conflict Encyclopedia: www.ucdp.uu.se, Uppsala University
+![image](https://github.com/jcook125/R-Code-Example/assets/123001199/46fa3408-edc4-47c1-912d-c2c6531b30d2)
+
+# Code Sample
 
 ```r
 # Packages Used
