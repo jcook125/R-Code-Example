@@ -7,7 +7,7 @@ The map below is a geospatial representation of organized violence events in Mal
 
 # Visualization and Code
 
-```{r, include = TRUE}
+```r
 # Packages Used
 library(tidyverse)
 library(maps)
