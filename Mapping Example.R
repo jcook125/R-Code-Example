@@ -1,0 +1,30 @@
+# Packages Used
+library(tidyverse)
+library(maps)
+
+# Import the Dataset
+Mali = read_csv("Mali_Violence_Data.csv")
+
+# Code for Map
+
+map_mali = map_data('world', region = "Mali") 
+# the map_data function creates a dataframe with Mali, used in one of the geoms
+
+# The ggplot consists of 3 stacked geoms, a base layer, the country map, and the points
+ggplot() +
+  geom_polygon(data = map_data("world"), # This creates the base layer "world" map
+               aes(x = long, y = lat, group = group),
+               color = 'black', fill = 'tan') + # I wanted black borders and tan countries
+  geom_polygon(data = map_mali, # This creates the shape of Mali, referring to the df created
+               aes(x = long, y = lat, group = group)) + 
+  geom_point(data = Mali, aes(x = longitude, y = latitude), # Points from the Uppsala df
+             color = 'red', shape = 1, alpha = 0.5) + #specify color, shape, transparency
+  coord_map() + 
+  coord_fixed( # this lets you select your map's borders by coordinates
+    ratio = 1,
+    xlim = c(-12,4),
+    ylim = c(10.5,25)) + 
+  labs(title = "Organized Violence-Related Deaths Across Mali", x = "",
+       y = "") +
+  theme(
+    axis.text = element_blank())
